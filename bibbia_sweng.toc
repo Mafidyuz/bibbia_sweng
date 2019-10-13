@@ -1,0 +1,26 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduzione}{3}{section.1}
+\contentsline {paragraph}{Vaporwave}{4}{section*.2}
+\contentsline {section}{\numberline {2}Produzione software}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Modellare il ciclo di vita di un software}{4}{subsection.2.1}
+\contentsline {section}{\numberline {3}Reti di Petri}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Definizioni}{5}{subsection.3.1}
+\contentsline {paragraph}{Preset}{5}{section*.3}
+\contentsline {paragraph}{Postset}{5}{section*.4}
+\contentsline {paragraph}{Una transizione t abilitata in M}{5}{section*.5}
+\contentsline {paragraph}{Lo scatto di una transizione}{5}{section*.6}
+\contentsline {subsection}{\numberline {3.2}Relazioni}{5}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Sequenza}{5}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Conflitto}{6}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Concorrenza}{7}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Insieme di raggiungibilit\IeC {\`a}}{7}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Propriet\IeC {\`a} di limitatezza}{8}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Vitalit\IeC {\`a} di una transizione}{8}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Estensioni e riduzioni per le reti di Petri}{9}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}Capacit\IeC {\`a} dei posti}{9}{subsubsection.3.6.1}
+\contentsline {paragraph}{Definizione formale}{9}{section*.7}
+\contentsline {subsubsection}{\numberline {3.6.2}Archi inibitori}{10}{subsubsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.3}Eliminazione pesi archi}{10}{subsubsection.3.6.3}
+\contentsline {paragraph}{Esempio}{10}{section*.8}
+\contentsline {subsubsection}{\numberline {3.6.4}Reti condizioni eventi}{11}{subsubsection.3.6.4}
+\contentsline {subsubsection}{\numberline {3.6.5}Rete conservativa}{12}{subsubsection.3.6.5}

@@ -1,0 +1,18 @@
+\BOOKMARK [1][-]{section.1}{Introduzione}{}% 1
+\BOOKMARK [1][-]{section.2}{Produzione software}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Modellare il ciclo di vita di un software}{section.2}% 3
+\BOOKMARK [1][-]{section.3}{Reti di Petri}{}% 4
+\BOOKMARK [2][-]{subsection.3.1}{Definizioni}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.2}{Relazioni}{section.3}% 6
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Sequenza}{subsection.3.2}% 7
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Conflitto}{subsection.3.2}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Concorrenza}{subsection.3.2}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Insieme di raggiungibilit\340}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.4}{Propriet\340 di limitatezza}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.5}{Vitalit\340 di una transizione}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.6}{Estensioni e riduzioni per le reti di Petri}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Capacit\340 dei posti}{subsection.3.6}% 14
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Archi inibitori}{subsection.3.6}% 15
+\BOOKMARK [3][-]{subsubsection.3.6.3}{Eliminazione pesi archi}{subsection.3.6}% 16
+\BOOKMARK [3][-]{subsubsection.3.6.4}{Reti condizioni eventi}{subsection.3.6}% 17
+\BOOKMARK [3][-]{subsubsection.3.6.5}{Rete conservativa}{subsection.3.6}% 18
