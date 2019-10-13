@@ -225,7 +225,7 @@
 				\\In sintesi: si possono fare delle reti senza peso analoghe a quelle con peso, ma la complessità aumenta parecchio. 
 				
 			\subsubsection{Reti condizioni eventi}
-				Una rete viene detta $C/E$ se tutti gli archi hanno peso 1 e tutti i posti hanno capacità 1. Se i posti (condizioni) in ingresso a $t$ contengono un token, la transizione $t$ (evento) può scattare. Una rete $P/T$ \textbf{limitata} ha sempre una corrispondente nella classe $C/E$. 
+				Una rete viene detta $C/E$ se tutti gli archi hanno peso 1 e tutti i posti hanno capacità 1. Se i posti (\textit{condizioni}) in ingresso a $t$ contengono un token, la transizione $t$ (\textit{evento}) può scattare. Una rete $P/T$ \textbf{limitata} ha sempre una corrispondente nella classe $C/E$. 
 				
 			\subsubsection{Rete conservativa}
 				Data una funzione di pesi $H$ $$H: P \rightarrow \mathbb{N}^+$$
@@ -233,17 +233,74 @@
 				$$\forall M' \in R(P/T,M)$$
 				$$\sum_{p \in P} H(p)M'(p) = \sum_{p \in P} H(p)M(p)$$
 				La sommatoria pesata (con la funzione $H$) del numeri di gettoni nei vari posti da sempre lo stesso valore per qualunque marcatura raggiungibile.
-
+								$$conservativit\textit{à} \rightarrow limitatezza$$
 				Se una rete è conservativa allora è anche limitata. Una rete limitata non è per forza conservativa.
-				$$conservativit\textit{à} \rightarrow limitatezza$$
+				
 				Una rete $P/T$ conservativa rispetto alla funzione che assegna pesi tutti uguali a 1 si dice \textbf{strettamente conservativa}. Il numero di gettoni in una rete strettamente conservativa non varia mai.
 				
 				Verificare che una rete sia conservativa può essere un problema non banale, capire se è strettamente conservativa è molto più facile. 
 				
 				Se il numero di token consumati dallo scatto di una transizione \textbf{non morta} è uguale al numero di token creati, allora la rete è strettamente conservativa.
 		
-		\subsection{Tecniche di analisi}
+		\subsection{Tecniche di analisi dinamiche}
+			L'analisi dinamica è il processo di valutazione di un programma o di una rete basato sull'osservazione della sua evoluzione durante l'esecuzione.
+
+			\subsubsection{Albero di raggiungibilità}
+				\begin{itemize}
+					\item Crea la radice corrispondente alla \textbf{marcatura iniziale}, etichetta il nodo come \textit{nuovo}.
+					\item Finchè esistono nodi etichettati come \textit{nuovo} esegui i seguenti passi:
+						\begin{itemize}
+							\item Seleziona una marcatura $M$ con etichetta \textit{nuovo} e togli l'etichetta.	
+							\item Se $M$ è identica ad una marcatura sul cammino dalla radice ad $M$, etichetta $M$ come \textit{duplicata} e passa ad un'altra marcatura.
+							\item Se nessuna transizione è abilitata in $M$, etichetta la marcatura come \textit{finale} (\textbf{deadlock}).
+							\item Finchè esistono transizione abilitate in $M$ esegui i seguenti passi per ogni transizione $t$ abilitata in $M$:
+								\begin{itemize}
+									\item Crea la marcatura $M'$ prodotta dallo scatto di $t$.
+									\item Crea un nodo corrispondente a $M'$, aggiungi un arco da $M$ a $M'$ ed etichetta $M'$ come \textit{nuovo}.
+								\end{itemize}
+						\end{itemize}
+				\end{itemize}
+				
+			\paragraph{Problema dei lettori e scrittori}
+				Ci sono 4 lettori e 2 scrittori che hanno accesso ad una risorsa condivisa: 
+				\begin{itemize}
+					\item I lettori possono accedere simultaneamente alla risorsa.
+					\item Gli scrittori hanno bisogno di accesso esclusivo.
+				\end{itemize}
+				\img{Rete di Petri del problema dei lettori e scrittori}{0.4}{img/scrittori.png}
+				La rete di Petri in figura sembra fare quello che ci serve, ma come possiamo dimostrarlo? Con l'albero di raggiungibilità possiamo costruire tutte le marcature raggiungibili e dimostrare che ci sono solo quelle che ci interessano.
+				\img{Albero di raggiungibilità}{0.4}{img/albero_scr.png}
+				\newpage
+				Osservando l'albero possiamo fare delle osservazioni:
+				\begin{itemize}
+					\item I lettori sono in mutua esclusione con gli scrittori? Basta controllare se esistono stati in cui la marcatura ha contemporanemente gettoni in \texttt{LettoriAttivi} e \texttt{ScrittoriAttivi} \textit{(secondo e quinto numero} $>0$ $(?>0??>0))$. 
+					\item Ci può essere più di uno scrittore attivo? Basta controllare se esistono stati in cui la marcatura ha più di un gettone in ScrittoriAttivi \textit{(l'ultimo numero} $>1)$.
+					\item La rete è viva? Per rispondere a questa domanda viene più semplice trasformare l'albero in un grafo di raggiungibilità, così facendo ci si accorge facilmente che la rete è viva perchè viene da ogni stato posso raggiungere un qualsiasi altro stato.
+				\end{itemize}
+				\img{Grafo di raggiungibilità}{0.4}{img/grafo_scr.png}
 			
+			\paragraph{Limiti degli alberi di raggiungibilità}
+				\begin{itemize}
+					\item Deve enumerare tutte le possibili marcature raggiungibili in quanto le analisi si possono fare solo quando l'albero è completo, quindi potrebbe essere lento da creare. 
+					\item In caso di rete illimitata l'albero è infinito e non può essere completato, quindi non possiamo dire se una rete è limitata o illimitata.
+					\item Gli stati possono essere facilmente troppi (\textit{crescita esponenziale}).
+				\end{itemize}
+				
+			\paragraph{Risposte che ci possono dare gli alberi di raggiungibilità} 
+				\begin{itemize}
+					\item Se una rete è limitata ci sa dire quasi tutto, è l'esplicitazione degli stati della rete (\textit{l'automa a stati finiti corrispondente}).  
+				\end{itemize}
+			
+			\subsubsection{Copribilità (coverability)}
+				Diciamo che una marcatura $M$ copre una marcatura $M'$ se e solo se $$\forall p \in P \quad M(p) \geq M'(p)$$
+				
+				 
+			
+			
+			
+\newpage			
+		\subsection{Tecniche di analisi statiche}
+			L'analisi statica è il processo di valutazione di un programma o di una rete basato sulla sua struttura, indipendentemente dalla sua evoluzione.
 			
 		
 \end{document}

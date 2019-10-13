@@ -1,4 +1,4 @@
-\select@language {english}
+\babel@toc {english}{}
 \contentsline {section}{\numberline {1}Introduzione}{3}{section.1}
 \contentsline {paragraph}{Vaporwave}{4}{section*.2}
 \contentsline {section}{\numberline {2}Produzione software}{4}{section.2}
@@ -24,3 +24,10 @@
 \contentsline {paragraph}{Esempio}{10}{section*.8}
 \contentsline {subsubsection}{\numberline {3.6.4}Reti condizioni eventi}{11}{subsubsection.3.6.4}
 \contentsline {subsubsection}{\numberline {3.6.5}Rete conservativa}{12}{subsubsection.3.6.5}
+\contentsline {subsection}{\numberline {3.7}Tecniche di analisi dinamiche}{12}{subsection.3.7}
+\contentsline {subsubsection}{\numberline {3.7.1}Albero di raggiungibilit\IeC {\`a}}{12}{subsubsection.3.7.1}
+\contentsline {paragraph}{Problema dei lettori e scrittori}{13}{section*.9}
+\contentsline {paragraph}{Limiti degli alberi di raggiungibilit\IeC {\`a}}{14}{section*.10}
+\contentsline {paragraph}{Risposte che ci possono dare gli alberi di raggiungibilit\IeC {\`a}}{14}{section*.11}
+\contentsline {subsubsection}{\numberline {3.7.2}Copribilit\IeC {\`a} (coverability)}{14}{subsubsection.3.7.2}
+\contentsline {subsection}{\numberline {3.8}Tecniche di analisi statiche}{15}{subsection.3.8}
